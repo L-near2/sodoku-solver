@@ -62,6 +62,13 @@ This program contains four main functions (print_board, find_empty, is_valid, an
    - In short, what this function does is check every cell on every line (line after line), starting with the top left cell. Once the first empty cell is found (containing the value 0),it returns its coordinates.
    - Coordinates: 700 + row + col
    - I used this method because I didn't want to use tables. I think this method is simpler and better.
+   
+4. ``` is_valid() ``` Function:
+   - This function takes 3 arguments (the Sudoku board, the number to be placed in the cell, and the coordinates of the cell). This function does the same as the first function, it checks line, column, and square(basic Sudoku rules). If it matches the conditions, it returns 1 (True), otherwise it returns 0 (False).
+
+   - True: The number can be placed in that cell.
+
+   - False: This number cannot be placed in that cell.
 
      
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
