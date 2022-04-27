@@ -57,6 +57,11 @@ This program contains four main functions (print_board, find_empty, is_valid, an
 
 2. ``` print_board() ``` Function:
    - There is nothing special about this function. I think it needs no explanation. This function just prints the Sudoku board.
+   
+3. ``` find_empty() ``` Function:
+   - In short, what this function does is check every cell on every line (line after line), starting with the top left cell. Once the first empty cell is found (containing the value 0),it returns its coordinates.
+   - Coordinates: 700 + row + col
+   - I used this method because I didn't want to use tables. I think this method is simpler and better.
 
      
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
