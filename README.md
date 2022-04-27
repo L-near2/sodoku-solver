@@ -79,17 +79,17 @@ This program contains four main functions (print_board, find_empty, is_valid, an
 
         But if we do not find any empty cells, it means that all the cells have been filled in. It means that we have reached the end of the panel (the bottom right), and it is not possible to reach the end of the panel unless all the cells have been filled in with the appropriate number, and here there is no need to continue; we will exit the function.
 
-        The function find_empty If it finds an empty cell, it returns its coordinates, and if not, it returns 0. 
+        The function ``` find_empty ``` If it finds an empty cell, it returns its coordinates, and if not, it returns 0. 
       
-   2. - After the find_empty() function returns the coordinates of the empty cell, we must fill it with the appropriate number.
+   2. - After the ``` find_empty() ``` function returns the coordinates of the empty cell, we must fill it with the appropriate number.
 
         *How will we choose the right number?*
 
-      - We will make a loop containing numbers from 1 to 9, and check that we can put this number in the cell with the help of the is_valid() function. If this function returns 1, it means we can put this number in this cell.
+      - We will make a loop containing numbers from 1 to 9, and check that we can put this number in the cell with the help of the ``` is_valid() ``` function. If this function returns 1, it means we can put this number in this cell.
 
         So we replace the content of this cell with the number we have.
 
-      - Now the empty cell is filled. What do you think will happen if we call the solve () function again? We will repeat all the previous steps, but don't forget the previous cell that was empty. Now it is not empty. So the function that checks for empty cells returns a cell other than the previous cell. We repeat the same operation.
+      - Now the empty cell is filled. What do you think will happen if we call the ``` solve() ``` function again? We will repeat all the previous steps, but don't forget the previous cell that was empty. Now it is not empty. So the function that checks for empty cells returns a cell other than the previous cell. We repeat the same operation.
 
         If it returns 0, we cannot put the number in the cell, so we move to the next number, and we repeat the previous steps.
 
