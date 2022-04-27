@@ -1,8 +1,38 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//Functions Prototype
+int valid(int board[9][9], int , int );
+void print_board(int board[9][9]);
+int find_empty(int board[9][9]);
+int solve(int board[9][9]);
+int valid_board(int board[9][9]);
+
+
+//1. print_board() function
+void print_board(int board[9][9]){
+    int i,j;
+    for (i = 0; i < 9; i++){
+        if(i%3 == 0 && i != 0) printf("---------------------------------\n");
+        for (j = 0; j < 9; j++){
+            if(j%3 == 0 && j != 0) printf(" | ");
+            printf(" %d ", board[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+//2. find_empty() function
+int find_empty(int board[9][9]){
+    int i,j;
+    for (i = 0; i < 9; i++)
+        for (j = 0; j < 9; j++)
+            if(board[i][j] == 0) return 700+(i*10)+j; //700 + row + col
+    return 0;
+}
+
 //3. valid() function
-int valid(int board[9][9], int num, int pos){
+int is_valid(int board[9][9], int num, int pos){
     //pos : 700 + row + col
     int i,j,row, col,box_row,box_col;
     row = (pos/10)-70;
@@ -31,29 +61,6 @@ int valid(int board[9][9], int num, int pos){
     return 1; //1 : true
 }
 
-
-//1. print_board() function
-void print_board(int board[9][9]){
-    int i,j;
-    for (i = 0; i < 9; i++){
-        if(i%3 == 0 && i != 0) printf("---------------------------------\n");
-        for (j = 0; j < 9; j++){
-            if(j%3 == 0 && j != 0) printf(" | ");
-            printf(" %d ", board[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-//2. find_empty() function
-int find_empty(int board[9][9]){
-    int i,j;
-    for (i = 0; i < 9; i++)
-        for (j = 0; j < 9; j++)
-            if(board[i][j] == 0) return 700+(i*10)+j; //700 + row + col
-    return 0;
-}
-
 //4. solve() function
 int solve(int board[9][9]){
     int i,empty_pos,row,col;
@@ -66,7 +73,7 @@ int solve(int board[9][9]){
         col = (empty_pos%10);
     }
     for (i = 1; i < 10; i++){
-        if(valid(board,i,empty_pos)){
+        if(is_valid(board,i,empty_pos)){
             board[row][col] = i;
 
             if(solve(board)){
@@ -84,7 +91,7 @@ int valid_board(int board[9][9]){
     for (i = 0; i < 9; i++)
         for (j = 0; j < 9; j++)
             if(board[i][j])
-                if(( valid(board,board[i][j],700+(i*10)+j) ) == 0)
+                if(( is_valid(board,board[i][j],700+(i*10)+j) ) == 0)
                     return 0;
     return 1;
 }
@@ -109,7 +116,7 @@ int main(){
         print_board(board);
     }
 
-    else printf("Invalid sudoku puzzles..!!!\n");
+    else printf("Invalid sudoku puzzle..!!!\n");
 
     system("PAUSE");
 
