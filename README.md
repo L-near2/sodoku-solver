@@ -95,5 +95,7 @@ This program contains four main functions (print_board, find_empty, is_valid, an
 
         If we reach the number 9 and we do not find any suitable numbers, we will do what is known as backtracking, which is to reset the current cell and put the value 0 in it. And return to the cell before it and try another number. until you find the right solution.
 
+###### The image below will summarize how this program works :
+
      
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
