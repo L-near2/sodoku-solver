@@ -48,4 +48,6 @@ int board[9][9] = { { 7, 0, 2, 5, 3, 0, 0, 8, 0 },
                     { 0, 0, 0, 7, 5, 0, 1, 0, 6 } };
 ```
 
+## How it works:
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
