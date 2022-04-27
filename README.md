@@ -54,5 +54,9 @@ This program contains four main functions (print_board, find_empty, is_valid, an
 1. ``` valid_board() ``` Function:
    - The purpose of this function is to check the input of the Sudoku board to determine whether it is valid or not. You can mistake the input and think that the program is not working, but the reason is that the Sudoku board is wrong in the first place.
 					If you repeat a number in the same line, column, or square (Sudoku basic rules), the function will return 0 (False), and print the Sudoku board followed by the message "Invalid Sudoku puzzle." (Line 119).
+
+2. ``` print_board() ``` Function:
+   - There is nothing special about this function. I think it needs no explanation. This function just prints the Sudoku board.
+
      
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
