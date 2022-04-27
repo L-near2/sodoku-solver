@@ -78,8 +78,14 @@ This program contains four main functions (print_board, find_empty, is_valid, an
       - So the first thing we will do is look for an empty cell. If we find an empty cell, that means we haven't filled out the whole sudoku board (we haven't found the solution yet).
 
         But if we do not find any empty cells, it means that all the cells have been filled in. It means that we have reached the end of the panel (the bottom right), and it is not possible to reach the end of the panel unless all the cells have been filled in with the appropriate number, and here there is no need to continue; we will exit the function.
+       
+	   ```c
+	    if(!(empty_pos))
+        	return 1; //1: True
+	   ```
 
-        The function ``` find_empty ``` If it finds an empty cell, it returns its coordinates, and if not, it returns 0. 
+      
+       - The function ``` find_empty ``` If it finds an empty cell, it returns its coordinates, and if not, it returns 0. 
       
    2. - After the ``` find_empty() ``` function returns the coordinates of the empty cell, we must fill it with the appropriate number.
 
