@@ -28,10 +28,24 @@ For [more details.](https://sudoku.com/how-to-play/sudoku-rules-for-complete-beg
  ## Instructions
  ### How To Use:
  
- Compile and run program using any C compiler.
+ - Compile and run program using any C compiler.
  
- To modify the board, change the values of the int board [9] [9] in the main function to match the sudoku you want to solve. Empty cells are represented by the number 0!.
+ - To modify the board, change the values of the int board [9] [9] in the main function to match the sudoku you want to solve. Empty cells are represented by the number 0!.
  
  ![Input](https://user-images.githubusercontent.com/82291615/165542648-06a536a2-9098-4978-887b-1a76c8f17622.png)
+ 
+ - *Board in main Function :*
+
+```c
+int board[9][9] = { { 7, 0, 2, 5, 3, 0, 0, 8, 0 },
+                    { 0, 5, 9, 0, 2, 0, 0, 1, 0 },
+                    { 0, 8, 0, 0, 4, 0, 0, 0, 0 },
+                    { 6, 0, 0, 0, 8, 0, 4, 0, 9 },
+                    { 0, 0, 5, 0, 6, 2, 0, 0, 8 },
+                    { 0, 0, 0, 0, 7, 4, 5, 0, 0 },
+                    { 0, 0, 7, 0, 0, 6, 0, 0, 0 },
+                    { 9, 0, 0, 0, 0, 0, 7, 0, 0 },
+                    { 0, 0, 0, 7, 5, 0, 1, 0, 6 } };
+```
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82291615/165399682-a0e91253-4035-451d-ac6e-13752a951949.gif)
