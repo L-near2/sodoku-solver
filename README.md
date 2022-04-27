@@ -49,7 +49,7 @@ int board[9][9] = { { 7, 0, 2, 5, 3, 0, 0, 8, 0 },
 ```
 
 ## How it works:
-this program contain 4 main functions (print_board, find_empty, is_valid, solve), and 1 function optional (valid_board).
+This program contains four main functions (print_board, find_empty, is_valid, and solve) and one optional function (valid_board).
 
 1. ``` valid_board() ``` Function:
    - The purpose of this function is to check the input of the Sudoku board to determine whether it is valid or not. You can mistake the input and think that the program is not working, but the reason is that the Sudoku board is wrong in the first place.
