@@ -104,7 +104,9 @@ This program contains four main functions (print_board, find_empty, is_valid, an
 ###### The image below will summarize how this program works :
 
 <p align="center">
+	
   <img src="https://user-images.githubusercontent.com/82291615/165585630-bed4466d-0436-49f7-8b7e-db907e41f371.gif">
+	
 </p>
      
 
