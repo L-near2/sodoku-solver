@@ -11,6 +11,14 @@ Each row, column and square (9 spaces each) needs to be filled out with the numb
 For [more details.](https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/)
 
 ## Why This Program
+<!-- 
+	Hdi mzel ma ndirha mrnich 3ref cha ndir 
+	deja ana jdid fi hdi
+
+	dirha nta mohamed, dir السبب
+	3lch derna hed l haja 
+
+-->
  //
  
  //
