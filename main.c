@@ -8,6 +8,31 @@ int find_empty(int board[9][9]);
 int solve(int board[9][9]);
 int valid_board(int board[9][9]);
 
+int main(){
+    int board[9][9] = { { 7, 0, 2, 5, 3, 0, 0, 8, 0 },
+                        { 0, 5, 9, 0, 2, 0, 0, 1, 0 },
+                        { 0, 8, 0, 0, 4, 0, 0, 0, 0 },
+                        { 6, 0, 0, 0, 8, 0, 4, 0, 9 },
+                        { 0, 0, 5, 0, 6, 2, 0, 0, 8 },
+                        { 0, 0, 0, 0, 7, 4, 5, 0, 0 },
+                        { 0, 0, 7, 0, 0, 6, 0, 0, 0 },
+                        { 9, 0, 0, 0, 0, 0, 7, 0, 0 },
+                        { 0, 0, 0, 7, 5, 0, 1, 0, 6 } };
+
+    print_board(board);
+
+    if(valid_board(board)){
+        solve(board);
+        printf("\n\n=================================\n\n");
+        print_board(board);
+    }
+
+    else printf("Invalid sudoku puzzle..!!!\n");
+
+    system("PAUSE");
+
+    return 0;
+}
 
 //1. print_board() function
 void print_board(int board[9][9]){
@@ -94,31 +119,4 @@ int valid_board(int board[9][9]){
                 if(( is_valid(board,board[i][j],700+(i*10)+j) ) == 0)
                     return 0;
     return 1;
-}
-
-
-int main(){
-    int board[9][9] = { { 7, 0, 2, 5, 3, 0, 0, 8, 0 },
-                        { 0, 5, 9, 0, 2, 0, 0, 1, 0 },
-                        { 0, 8, 0, 0, 4, 0, 0, 0, 0 },
-                        { 6, 0, 0, 0, 8, 0, 4, 0, 9 },
-                        { 0, 0, 5, 0, 6, 2, 0, 0, 8 },
-                        { 0, 0, 0, 0, 7, 4, 5, 0, 0 },
-                        { 0, 0, 7, 0, 0, 6, 0, 0, 0 },
-                        { 9, 0, 0, 0, 0, 0, 7, 0, 0 },
-                        { 0, 0, 0, 7, 5, 0, 1, 0, 6 } };
-
-    print_board(board);
-
-    if(valid_board(board)){
-        solve(board);
-        printf("\n\n=================================\n\n");
-        print_board(board);
-    }
-
-    else printf("Invalid sudoku puzzle..!!!\n");
-
-    system("PAUSE");
-
-    return 0;
 }
